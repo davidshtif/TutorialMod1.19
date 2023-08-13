@@ -3,6 +3,8 @@ package net.davidshtif.tutorialmod;
 import com.mojang.logging.LogUtils;
 import net.davidshtif.tutorialmod.block.ModBlocks;
 import net.davidshtif.tutorialmod.item.ModItems;
+import net.davidshtif.tutorialmod.world.feature.ModConfiguredFeatures;
+import net.davidshtif.tutorialmod.world.feature.ModPlacedFeatures;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;
@@ -28,6 +30,9 @@ public class TutorialMod
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModConfiguredFeatures.register(modEventBus);
+        ModPlacedFeatures.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
