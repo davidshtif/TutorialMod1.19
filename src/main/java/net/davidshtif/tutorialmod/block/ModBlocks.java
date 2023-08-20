@@ -2,6 +2,7 @@ package net.davidshtif.tutorialmod.block;
 
 import net.davidshtif.tutorialmod.TutorialMod;
 import net.davidshtif.tutorialmod.block.custom.BlueberryCropBlock;
+import net.davidshtif.tutorialmod.block.custom.JumpyBlock;
 import net.davidshtif.tutorialmod.item.ModCreativeModeTab;
 import net.davidshtif.tutorialmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -39,6 +40,11 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> BLUEBERRY_CROP = BLOCKS.register("blueberry_crop",
             () -> new BlueberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
+
+    public static final RegistryObject<Block> JUMPY_BLOCK = registerBlock("jumpy_block",
+            () -> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.TUTORIAL_TAB);
+
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {

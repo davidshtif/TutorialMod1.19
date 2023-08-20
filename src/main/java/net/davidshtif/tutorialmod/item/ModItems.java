@@ -3,6 +3,8 @@ package net.davidshtif.tutorialmod.item;
 import net.davidshtif.tutorialmod.TutorialMod;
 import net.davidshtif.tutorialmod.base.ModArmorMaterial;
 import net.davidshtif.tutorialmod.block.ModBlocks;
+import net.davidshtif.tutorialmod.item.custom.EightBallItem;
+import net.davidshtif.tutorialmod.item.custom.ModArmorItem;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
@@ -47,7 +49,7 @@ public class ModItems {
             () -> new HoeItem(ToolTiers.ZIRCON, 0, 0, new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
     
     public static final RegistryObject<ArmorItem> ZIRCON_HELMET = ITEMS.register("zircon_helmet",
-            () -> new ArmorItem(ArmorTiers.ZIRCON, EquipmentSlot.HEAD, new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+            () -> new ModArmorItem(ArmorTiers.ZIRCON, EquipmentSlot.HEAD, new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
     public static final RegistryObject<ArmorItem> ZIRCON_CHESTPLATE = ITEMS.register("zircon_chestplate",
             () -> new ArmorItem(ArmorTiers.ZIRCON, EquipmentSlot.CHEST, new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
@@ -58,6 +60,8 @@ public class ModItems {
     public static final RegistryObject<ArmorItem> ZIRCON_BOOTS = ITEMS.register("zircon_boots",
             () -> new ArmorItem(ArmorTiers.ZIRCON, EquipmentSlot.FEET, new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
+    public static final RegistryObject<Item> EIGHT_BALL = ITEMS.register("eight_ball",
+            () -> new EightBallItem(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
 
     public static class ToolTiers {
